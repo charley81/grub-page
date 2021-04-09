@@ -1,13 +1,26 @@
 import React from 'react'
+import { css } from '@emotion/react'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer
+      css={css`
+        background: var(--colorDark);
+        color: var(--colorLight);
+        text-align: center;
+        padding: 1rem;
+        line-height: 2;
+
+        a {
+          color: var(--colorPrimary);
+        }
+      `}
+    >
       <p>
-        &copy; <span>grupPage {new Date().getFullYear()}</span>
+        &copy; <span>grub-Page {new Date().getFullYear()}</span>
       </p>
       <p>
-        Developed: <span>Chris Harley</span> @ <a href="">The Great Dev Co.</a>
+        Developed by <a href="https:/thegreatdevco.com">The Great Dev Co.</a>
       </p>
     </footer>
   )

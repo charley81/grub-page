@@ -13,9 +13,17 @@ module.exports = {
         // Accepts the following options, all of which are defined by `@emotion/babel-plugin` plugin.
         // The values for each key in this example are the defaults the plugin uses.
         sourceMap: true,
-        autoLabel: "dev-only",
+        autoLabel: 'dev-only',
         labelFormat: `[local]`,
         cssPropOptimization: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Poppins', 'sans-serif'],
+        },
       },
     },
   ],

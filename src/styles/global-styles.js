@@ -3,8 +3,9 @@ import { css } from '@emotion/react'
 const globalStyles = css`
   :root {
     --colorPrimary: rgb(105, 179, 128);
-    --colorDark: rgb(30, 30, 30);
+    --colorLight: rgb(255, 255, 255);
     --colorMid: rgb(85, 85, 85);
+    --colorDark: rgb(30, 30, 30);
     --borderRadius: 10px;
     --transition: all 0.3s ease;
     --shadowLight: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
@@ -20,12 +21,30 @@ const globalStyles = css`
     box-sizing: border-box;
   }
 
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+    background: var(--colorLight);
+    color: var(--colorDark);
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+  }
+
   a {
     text-decoration: none;
   }
 
   li {
     list-style: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 1.75rem;
   }
 `
 export default globalStyles
