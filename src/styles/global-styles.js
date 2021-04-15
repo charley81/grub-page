@@ -12,7 +12,7 @@ const globalStyles = css`
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     --shadowDark: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
       rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    --maxWidth: 1100px;
+    --maxWidth: 1200px;
   }
 
   * {
@@ -21,17 +21,19 @@ const globalStyles = css`
     box-sizing: border-box;
   }
 
+  ${'' /* base styles */}
   body {
     font-size: 16px;
     line-height: 1.5;
     background: var(--colorLight);
     color: var(--colorDark);
     font-family: 'Poppins', sans-serif;
-    padding: 1rem;
+    letter-spacing: 2px;
   }
 
   a {
     text-decoration: none;
+    color: var(--colorMid);
   }
 
   li {
@@ -45,6 +47,11 @@ const globalStyles = css`
   h5,
   h6 {
     margin-bottom: 1.75rem;
+  }
+
+  ${'' /* utility classes */}
+  .active-link {
+    color: var(--colorPrimary);
   }
 `
 export default globalStyles
