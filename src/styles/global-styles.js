@@ -23,7 +23,7 @@ const globalStyles = css`
 
   ${'' /* base styles */}
   body {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     background: var(--colorLight);
     color: var(--colorDark);
@@ -64,6 +64,7 @@ const globalStyles = css`
     border-radius: var(--borderRadius);
     cursor: pointer;
     font-size: 1.1rem;
+    margin-top: 1rem;
 
     &:hover {
       background: transparent;

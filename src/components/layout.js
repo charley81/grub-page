@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './navbar'
 import Footer from './footer'
 import globalStyles from '../styles/global-styles'
-import { Global } from '@emotion/react'
+import { Global, css } from '@emotion/react'
 
 import 'normalize.css'
 
@@ -11,7 +11,14 @@ const Layout = ({ children }) => {
     <>
       <Global styles={globalStyles} />
       <Navbar />
-      <main>{children}</main>
+      <main
+        css={css`
+          max-width: var(--maxWidth);
+          margin: auto;
+        `}
+      >
+        {children}
+      </main>
       {/* <Footer /> */}
     </>
   )

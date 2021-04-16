@@ -7,20 +7,21 @@ const contactPage = () => {
     <Layout>
       <main
         css={css`
-          margin-top: 2rem;
           padding: 1rem;
+          margin-top: 2rem;
+
+          .contact-section {
+            display: grid;
+            gap: 2rem;
+          }
 
           h3 {
             font-size: 1.5rem;
           }
 
           p {
-            margin: 2rem 0 2rem 0;
             font-weight: 100;
-          }
-
-          .contact-form {
-            margin: 1rem 0;
+            max-width: 500px;
           }
 
           label,
@@ -45,12 +46,15 @@ const contactPage = () => {
             margin: 1rem 0;
           }
 
-          button {
-            margin-top: 1rem;
+          @media (min-width: 768px) {
+            .contact-section {
+              grid-template-columns: 1fr 1fr;
+              align-items: center;
+            }
           }
         `}
       >
-        <section>
+        <section className="contact-section">
           {/* Contact Info */}
           <article className="contact-msg">
             <h3>I'd Love To Hear From You</h3>

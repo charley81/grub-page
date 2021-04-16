@@ -21,7 +21,7 @@ const Navbar = () => {
 
         h3 {
           margin: 0;
-          font-size: 1.5rem;
+          font-size: 2rem;
 
           a {
             color: var(--colorPrimary);
