@@ -22,7 +22,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Poppins', 'sans-serif'],
+          families: ['Poppins Condensed:100,300,700', 'sans-serif'],
         },
       },
     },
