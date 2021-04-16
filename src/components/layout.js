@@ -15,6 +15,8 @@ const Layout = ({ children }) => {
         css={css`
           max-width: var(--maxWidth);
           margin: auto;
+          padding: 1rem;
+          margin-top: 5rem;
         `}
       >
         {children}

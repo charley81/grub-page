@@ -6,21 +6,14 @@ const contactPage = () => {
   return (
     <Layout>
       <main
+        className="page"
         css={css`
-          padding: 1rem;
-          margin-top: 2rem;
-
           .contact-section {
             display: grid;
             gap: 2rem;
           }
 
-          h3 {
-            font-size: 1.5rem;
-          }
-
           p {
-            font-weight: 100;
             max-width: 500px;
           }
 
