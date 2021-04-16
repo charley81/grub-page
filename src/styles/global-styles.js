@@ -49,6 +49,14 @@ const globalStyles = css`
     margin-bottom: 1rem;
   }
 
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-weight: 100;
+  }
+
   ${'' /* utility classes */}
   .active-link {
     color: var(--colorPrimary);
@@ -65,11 +73,20 @@ const globalStyles = css`
     cursor: pointer;
     font-size: 1.1rem;
     margin-top: 1rem;
+    text-align: center;
+
+    a {
+      color: var(--colorLight);
+    }
 
     &:hover {
       background: transparent;
       border: 1px solid var(--colorPrimary);
       color: var(--colorPrimary);
+
+      a {
+        color: var(--colorPrimary);
+      }
     }
   }
 `

@@ -9,9 +9,13 @@ const Navbar = () => {
   return (
     <nav
       css={css`
-        padding: 1rem;
-        max-width: var(--maxWidth);
-        margin: auto;
+        border-bottom: dotted 2px var(--colorMid);
+
+        .nav-center {
+          padding: 1rem;
+          max-width: var(--maxWidth);
+          margin: auto;
+        }
 
         .nav-header {
           display: flex;
@@ -57,10 +61,12 @@ const Navbar = () => {
         }
 
         @media screen and (min-width: 768px) {
-          display: flex;
-          justify-content: space-between;
-          height: 5rem;
-          align-items: center;
+          .nav-center {
+            display: flex;
+            justify-content: space-between;
+            height: 5rem;
+            align-items: center;
+          }
 
           .menu-icon {
             display: none;
@@ -80,44 +86,54 @@ const Navbar = () => {
         }
       `}
     >
-      {/* header */}
-      <div className="nav-header">
-        <h3>
-          <Link to="/">grub-page</Link>
-        </h3>
-        <button className="menu-icon" onClick={() => setShow(!show)}>
-          <FaBars />
-        </button>
-      </div>
-      {/* links */}
-      <div className={show ? 'links show-links' : 'links'}>
-        <ul>
-          <li>
-            <Link to="/" className="link" activeClassName="active-link">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="link" activeClassName="active-link">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/tags" className="link" activeClassName="active-link">
-              Tags
-            </Link>
-          </li>
-          <li>
-            <Link to="/recipes" className="link" activeClassName="active-link">
-              Recipes
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="link" activeClassName="active-link">
-              Contact
-            </Link>
-          </li>
-        </ul>
+      <div className="nav-center">
+        {/* header */}
+        <div className="nav-header">
+          <h3>
+            <Link to="/">grub-page</Link>
+          </h3>
+          <button className="menu-icon" onClick={() => setShow(!show)}>
+            <FaBars />
+          </button>
+        </div>
+        {/* links */}
+        <div className={show ? 'links show-links' : 'links'}>
+          <ul>
+            <li>
+              <Link to="/" className="link" activeClassName="active-link">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="link" activeClassName="active-link">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/tags" className="link" activeClassName="active-link">
+                Tags
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/recipes"
+                className="link"
+                activeClassName="active-link"
+              >
+                Recipes
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="link  contact"
+                activeClassName="active-link"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   )
