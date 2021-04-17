@@ -9,8 +9,6 @@ const Navbar = () => {
   return (
     <nav
       css={css`
-        border-bottom: dotted 2px var(--colorMid);
-
         .nav-center {
           padding: 1rem;
           max-width: var(--maxWidth);
