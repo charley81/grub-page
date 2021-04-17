@@ -9,8 +9,6 @@ const Navbar = () => {
   return (
     <nav
       css={css`
-        border-bottom: dotted 2px var(--colorMid);
-
         .nav-center {
           padding: 1rem;
           max-width: var(--maxWidth);
@@ -60,7 +58,7 @@ const Navbar = () => {
           margin: 1rem 0;
         }
 
-        @media screen and (min-width: 768px) {
+        @media (min-width: 768px) {
           .nav-center {
             display: flex;
             justify-content: space-between;
@@ -82,6 +80,12 @@ const Navbar = () => {
 
           ul {
             display: flex;
+          }
+        }
+
+        @media (min-width: 1100px) {
+          h3 {
+            font-size: 3rem;
           }
         }
       `}
