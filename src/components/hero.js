@@ -49,7 +49,7 @@ const Hero = () => {
       `}
     >
       <StaticImage
-        src="../assets/hero-img.jpg"
+        src="../assets/images/hero-img.jpg"
         alt="some delicious looking food"
         className="hero-img"
         placeholder="tracedSVG"

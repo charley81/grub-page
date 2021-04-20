@@ -53,7 +53,7 @@ const aboutPage = () => {
           {/* about image */}
 
           <StaticImage
-            src="../assets/about-img.jpg"
+            src="../assets/images/about-img.jpg"
             alt="beer"
             className="about-img"
           />
