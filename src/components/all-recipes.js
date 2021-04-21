@@ -2,6 +2,7 @@ import React from 'react'
 import RecipesList from './recipes-list'
 import TagsList from './tags-list'
 import { useStaticQuery, graphql } from 'gatsby'
+import { css } from '@emotion/react'
 
 const query = graphql`
   {
@@ -28,7 +29,12 @@ const AllRecipes = () => {
   } = useStaticQuery(query)
 
   return (
-    <div>
+    <div
+      css={css`
+        display: grid;
+        gap: 2rem 1rem;
+      `}
+    >
       <h4>All Recipes</h4>
       <TagsList recipes={recipes} />
       <RecipesList recipes={recipes} />
