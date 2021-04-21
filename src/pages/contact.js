@@ -1,8 +1,14 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { css } from '@emotion/react'
+import { Link, graphql } from 'gatsby'
+import RecipesList from '../components/recipes-list'
 
-const contactPage = () => {
+const contactPage = ({
+  data: {
+    allContentfulRecipe: { nodes: recipes },
+  },
+}) => {
   return (
     <Layout>
       <main
@@ -32,11 +38,16 @@ const contactPage = () => {
           }
 
           input {
-            padding: 0.75rem;
+            padding: 0.5rem;
           }
 
           label {
             margin: 1rem 0;
+          }
+
+          .featured-recipes {
+            margin: 5rem auto;
+            text-align: center;
           }
 
           @media (min-width: 768px) {
@@ -88,9 +99,32 @@ const contactPage = () => {
             </form>
           </article>
         </section>
+        <section className="featured-recipes">
+          <h4>Check Some Featured Recipes</h4>
+          <RecipesList recipes={recipes} />
+        </section>
       </main>
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    allContentfulRecipe(
+      sort: { fields: title, order: ASC }
+      filter: { featured: { eq: true } }
+    ) {
+      nodes {
+        id
+        title
+        prepTime
+        cookTime
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+        }
+      }
+    }
+  }
+`
 
 export default contactPage

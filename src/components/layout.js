@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './navbar'
 import globalStyles from '../styles/global-styles'
 import { Global, css } from '@emotion/react'
+import Footer from './footer'
 
 import 'normalize.css'
 
@@ -20,6 +21,7 @@ const Layout = ({ children }) => {
       >
         {children}
       </main>
+      <Footer />
     </>
   )
 }
