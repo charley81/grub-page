@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from './navbar'
-import Footer from './footer'
 import globalStyles from '../styles/global-styles'
 import { Global, css } from '@emotion/react'
 
@@ -16,12 +15,11 @@ const Layout = ({ children }) => {
           max-width: var(--maxWidth);
           margin: auto;
           padding: 1rem;
-          margin: 2rem 0;
+          margin: 2rem auto;
         `}
       >
         {children}
       </main>
-      {/* <Footer /> */}
     </>
   )
 }

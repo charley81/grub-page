@@ -7,39 +7,36 @@ const Hero = () => {
     <header
       css={css`
         height: 50vh;
-        position: relative;
+        display: grid;
 
         .hero-img {
-          height: 100%;
-          border-radius: var(--borderRadius);
+          grid-area: 1/1;
         }
 
         .hero-container {
-          position: absolute;
-          top: 0;
-          left: 0;
+          grid-area: 1/1;
+          position: relative;
+          place-items: center;
+          display: grid;
           color: var(--colorLight);
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-container: center;
-          align-items: center;
           background: rgba(0, 0, 0, 0.4);
-          border-radius: var(--borderRadius);
-        }
-
-        .hero-text {
-          margin: auto;
           text-align: center;
         }
 
         h1 {
+          font-size: 3rem;
           margin: 0;
+        }
+
+        @media (min-width: 500px) {
+          h1 {
+            font-size: 4rem;
+          }
         }
 
         @media (min-width: 768px) {
           h1 {
-            font-size: 4rem;
+            font-size: 5rem;
           }
 
           p {
@@ -54,6 +51,7 @@ const Hero = () => {
         className="hero-img"
         placeholder="tracedSVG"
         layout="fullWidth"
+        formats={['auto', 'webp', 'avif']}
       />
       <div className="hero-container">
         <div className="hero-text">
