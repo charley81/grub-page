@@ -9,7 +9,6 @@ const RecipesList = ({ recipes = [] }) => {
       css={css`
         display: grid;
         gap: 2rem 1rem;
-        padding-bottom: 3rem;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 
         .recipe {

@@ -35,7 +35,6 @@ const AllRecipes = () => {
         gap: 2rem 1rem;
       `}
     >
-      <h4>All Recipes</h4>
       <TagsList recipes={recipes} />
       <RecipesList recipes={recipes} />
     </div>

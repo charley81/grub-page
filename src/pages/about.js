@@ -1,10 +1,15 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import { css } from '@emotion/react'
 import { StaticImage } from 'gatsby-plugin-image'
+import RecipesList from '../components/recipes-list'
 
-const aboutPage = () => {
+const aboutPage = ({
+  data: {
+    allContentfulRecipe: { nodes: recipes },
+  },
+}) => {
   return (
     <Layout>
       <main
@@ -22,6 +27,11 @@ const aboutPage = () => {
           .about-img {
             border-radius: var(--borderRadius);
             height: 500px;
+          }
+
+          .featured-recipes {
+            margin: 5rem auto;
+            text-align: center;
           }
 
           @media (min-width: 768px) {
@@ -58,9 +68,32 @@ const aboutPage = () => {
             className="about-img"
           />
         </section>
+        <section className="featured-recipes">
+          <h4>Check Some Featured Recipes</h4>
+          <RecipesList recipes={recipes} />
+        </section>
       </main>
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    allContentfulRecipe(
+      sort: { fields: title, order: ASC }
+      filter: { featured: { eq: true } }
+    ) {
+      nodes {
+        id
+        title
+        prepTime
+        cookTime
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+        }
+      }
+    }
+  }
+`
 
 export default aboutPage
