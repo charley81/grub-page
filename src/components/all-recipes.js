@@ -33,6 +33,11 @@ const AllRecipes = () => {
       css={css`
         display: grid;
         gap: 2rem 1rem;
+
+        @media (min-width: 992px) {
+          grid-template-columns: 200px 1fr;
+          gap: 1rem;
+        }
       `}
     >
       <TagsList recipes={recipes} />

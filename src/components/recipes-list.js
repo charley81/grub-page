@@ -24,6 +24,10 @@ const RecipesList = ({ recipes = [] }) => {
           height: 15rem;
           border-radius: var(--borderRadius);
         }
+
+        @media (min-width: 992px) {
+          margin-top: 2rem;
+        }
       `}
     >
       {recipes.map(recipe => {
