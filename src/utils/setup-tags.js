@@ -4,7 +4,7 @@ const setupTags = recipes => {
   recipes.forEach(recipe => {
     recipe.content.tags.forEach(tag => {
       if (allTags[tag]) {
-        allTags[tag] += 1
+        allTags[tag] = allTags[tag] + 1
       } else {
         allTags[tag] = 1
       }

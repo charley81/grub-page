@@ -24,9 +24,8 @@ const query = graphql`
 `
 
 const AllRecipes = () => {
-  const {
-    allContentfulRecipe: { nodes: recipes },
-  } = useStaticQuery(query)
+  const data = useStaticQuery(query)
+  const recipes = data.allContentfulRecipe.nodes
 
   return (
     <div
