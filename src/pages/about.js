@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import { css } from '@emotion/react'
 import { StaticImage } from 'gatsby-plugin-image'
 import RecipesList from '../components/recipes-list'
+import SEO from '../components/seo'
 
 const aboutPage = ({
   data: {
@@ -12,6 +13,7 @@ const aboutPage = ({
 }) => {
   return (
     <Layout>
+      <SEO title="about" />
       <main
         className="page"
         css={css`

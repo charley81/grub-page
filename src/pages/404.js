@@ -1,10 +1,12 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const errorPage = () => {
   return (
     <Layout>
+      <SEO title="error" />
       <main
         css={css`
           text-align: center;
