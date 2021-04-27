@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import { css } from '@emotion/react'
 import { Link, graphql } from 'gatsby'
 import RecipesList from '../components/recipes-list'
+import SEO from '../components/seo'
 
 const contactPage = ({
   data: {
@@ -11,6 +12,7 @@ const contactPage = ({
 }) => {
   return (
     <Layout>
+      <SEO title="contact" />
       <main
         className="page"
         css={css`
