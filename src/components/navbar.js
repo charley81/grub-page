@@ -114,11 +114,6 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/tags" className="link" activeClassName="active-link">
-                Tags
-              </Link>
-            </li>
-            <li>
               <Link
                 to="/recipes"
                 className="link"
